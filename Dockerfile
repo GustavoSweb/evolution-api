@@ -10,7 +10,6 @@ RUN apk update && apk upgrade && \
 WORKDIR /evolution
 
 COPY ./package.json .
-RUN npm config set timeout 600000
 RUN npm ci --jobs=1 --no-audit --progress=false && npm cache clean --force
 
 COPY . .
