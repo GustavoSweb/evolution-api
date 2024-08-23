@@ -10,12 +10,12 @@ RUN apk update && apk upgrade && \
 WORKDIR /evolution
 
 COPY ./package.json .
-
-RUN npm install
+RUN npm set timeout 600000
+RUN npm install --jobs=1 --no-audit --progress=false && npm cache clean --force 
 
 COPY . .
 
-RUN npm run build
+RUN npm install --jobs=1 --no-audit --progress=false
 
 FROM node:20.7.0-alpine AS final
 
