@@ -3,6 +3,7 @@
   "version": "1.8.2",
   "description": "Rest api for communication with WhatsApp",
   "main": "./dist/src/main.js",
+  "type": "module",
   "scripts": {
     "build": "tsc",
     "start": "ts-node --files --transpile-only ./src/main.ts",
