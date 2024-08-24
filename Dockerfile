@@ -10,7 +10,7 @@ RUN apk update && apk upgrade && \
 WORKDIR /evolution
 
 COPY package.json ./
-RUN npm install --jobs=1 --no-audit --progress=false
+RUN npm install 
 
 COPY . .
 
