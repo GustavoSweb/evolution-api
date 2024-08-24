@@ -178,4 +178,4 @@ WORKDIR /evolution
 
 COPY --from=builder /evolution .
 
-CMD [ "node", "./dist/src/main.ts" ]
+CMD [ "node", "./src/main.ts" ]
